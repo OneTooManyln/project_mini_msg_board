@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header"><h2>New message</h2></div>
+      <form method="POST" action="/new" autocomplete="off">
+        <label for="name">name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="message">message:</label>
+        <input type="text" id="message" name="message" />
+        <button class="form-submit" type="submit">Add message</button>
+      </form>
+    </div>
+  </body>
+</html>

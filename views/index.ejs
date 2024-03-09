@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="msg-board-container">
+      <div class="header"><h1>Mini Message Board</h1></div>
+
+      <div class="new-message-btn-container">
+        <!-- <button class="new-message-btn">Add a new message</button> -->
+        <button class="new-message-btn">
+          <p><a href="/new" class="new-message-btn">Add a new message</a></p>
+        </button>
+      </div>
+
+      <div class="msgs-container">
+        <% messages.forEach(msg => { %>
+        <div class="msg-container">
+          <div class="top">
+            <h2><%= msg.user %></h2>
+            <p class="added"><%= msg.added %></p>
+          </div>
+
+          <div class="msg-text"><%= msg.text %></div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>
